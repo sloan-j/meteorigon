@@ -19,6 +19,8 @@ class Meteorigon(object):
                 print(count,": ", submission.title)
                 print("Comments: ", submission.num_comments)
                 print("Score: ", submission.score)
+                print("URL: ", submission.url)
+                print("Comments: ", submission.permalink)
                 print("")
 
         print(count, " articles found")
