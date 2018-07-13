@@ -6,6 +6,10 @@ reddit = praw.Reddit('bot1')
 
 class Meteorigon(object):
 
+    def __init__(self):
+        self.sub_storage = [] 
+        self.driver = None
+
     # search for a particular article within a subreddit
     def search_titles(self): 
         count = 0
