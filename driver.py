@@ -1,5 +1,6 @@
 import os
 import praw
+from selenium import webdriver
 
 os.system('cls')
 reddit = praw.Reddit('bot1')
@@ -33,3 +34,11 @@ class Meteorigon(object):
     # return links
     def get_links(self):
         return(self.sub_storage)
+
+    # open link in browser
+    def open_link(self, i):
+        print(self.sub_storage[i])
+        print("")
+        temp_url = "http://www.reddit.com" + self.sub_storage[i]
+        driver = webdriver.Firefox()
+        driver = driver.get(temp_url)
